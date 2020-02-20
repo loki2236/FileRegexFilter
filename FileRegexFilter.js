@@ -4,6 +4,7 @@ const config = require('./config/config.js');
 const fs = require('fs');
 const RegEx = new RegExp(config.regex, 'gi');
 
+console.log("Abriendo directorio: "+config.directory);
 fs.readdir(config.directory, (err, files) => {
     // Filter Files
     files = files.filter(str => str.search(config.fileFilter) != -1);
